@@ -26,43 +26,11 @@ O projeto encontra-se em versão **MVP (Minimum Viable Product)**, contemplando 
 
 Necessário possuir:
 
-* Docker 
-
+* Git
+* Node.js
+* Python 3.13+
+* PostgresSQL 16+
 ---
-
-# 🐳Execução utilizando Docker
-
-O projeto possui ambiente totalmente conteinerizado.
-
-
-
-Serviços:
-
-| Serviço  | Tecnologia | Porta   |
-| -------- | ---------- | ------- |
-| Frontend | Next.js    | 3000    |
-| Backend  | FastAPI    | 8000    |
-| Banco    | PostgreSQL | interno |
-
-Executar:
-
-```bash
-docker compose up --build
-```
-
-Após inicialização:
-
-Frontend: (Aplicação)
-
-```
-http://localhost:3000
-```
-
-Swagger:
-
-```
-http://localhost:8000/docs
-```
 
 # 🌴Variáveis de Ambiente
 
@@ -75,47 +43,19 @@ Criar um arquivo:
 Exemplo:
 
 ```
+       
+#ALGORÍTIMO DE CRIPTOGRAFIA JWT
+ALGORITHM="HS256"
+#CHAVE JWT
+
+SECRET_KEY=minha_chave_super_segura
+
+#URL DO BANCO DE DADOS, ATENTEN-SE PARA ESCOLHER E INSERIR UMA SENHA EM "SUA_SENHA_AQUI"
+DATABASE_URL="postgresql://postgres:SUA_SENHA_AQUI@localhost:5432/resisus_db"
 
 
-        # Senha do usuário postgres
-        # Usada pelo container do banco e pelo backend
-        POSTGRES_PASSWORD=password
+Demais configurações estão em Settings.py (Opcionais)
 
-        PROJECT_NAME=RESISUS API
-        VERSION=1.0.0
-        ENVIRONMENT=development
-
-
-
-        # Chave usada para assinatura dos tokens JWT
-        # Em produção deve ser alterada para uma chave segura
-        SECRET_KEY=minha_chave_super_segura
-
-
-        # Algoritmo utilizado na criação do JWT
-        ALGORITHM=HS256
-
-
-        # Tempo de validade do token em minutos
-        ACCESS_TOKEN_EXPIRE_MINUTES=60
-
-
-        # Dentro do Docker o host é o nome do serviço:
-        # db
-        #
-        # Não usar localhost dentro dos containers
-
-        DATABASE_URL=postgresql://postgres:password@db:5432/resisus_db
-
-
-        # Cria usuário e dados de demonstração automaticamente
-        MOCK_ENABLED=True
-
-
-        NEXT_PUBLIC_API_URL=http://localhost:8000
-
-
-        BACKEND_CORS_ORIGINS=["http://localhost:3000"]
 ```
 
 Um arquivo de referência deve ser disponibilizado:
