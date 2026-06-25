@@ -1,9 +1,4 @@
-# ==============================================================================
-# SELEÇÃO FESF-SUS - CONFIGURAÇÃO GLOBAL DE SESSÃO E INFRAESTRUTURA
-# ==============================================================================
-
-
-.vev
+.venv
 .env
 .env.local
 .env.development.local
@@ -27,17 +22,14 @@ env/
 .pytest_cache
 .mypy_cache/
 .ruff_cache/
+*.egg-info/
+.pyre/
+.coverage
+htmlcov/
 
-# Banco de Dados Local do MVP (SQLite)
-# (Evita que os seus testes locais poluam o histórico do Git)
+# Banco de Dados Local do MVP 
 *.db
-*.sqlite3
 backend/src/*.db
-backend/src/*.sqlite3
-
-# ------------------------------------------------------------------------------
-# ⚛️ FRONTEND (Node.js / React / Next.js)
-# ------------------------------------------------------------------------------
 
 # Dependências Locais do NPM / Yarn
 node_modules/
@@ -60,10 +52,6 @@ pnpm-debug.log*
 # Arquivos de Telemetria Locais do Next.js
 .next/cache/
 
-# ------------------------------------------------------------------------------
-# 🐳 INFRAESTRUTURA (Docker / IDEs / SO)
-# ------------------------------------------------------------------------------
-
 # Arquivos temporários de IDEs (VS Code, PyCharm)
 .vscode/
 .idea/
@@ -72,8 +60,12 @@ pnpm-debug.log*
 *.njsproj
 *.sln
 *.swp
-*.yml
 
+#arquivos temporários
+*.tmp
+*.temp
+*.bak
+*.swp
 
 # Arquivos ocultos do Sistema Operacional
 .DS_Store

@@ -1,15 +1,16 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  output: "standalone",
   async redirects() {
     return [
       {
-        source: '/', // Onde o usuário acessa (localhost:3000)
-        destination: '/auth/login', // Para onde ele vai
-        permanent: true, // Indica para o navegador/SEO que essa é a rota permanente
+        source: '/', 
+        destination: '/auth/login', 
+        permanent: true, 
       },
     ];
-  },/* config options here */
+  },
   reactCompiler: true,
 };
 

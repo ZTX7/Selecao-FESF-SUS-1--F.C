@@ -77,7 +77,7 @@ export default function Register() {
           <Image src="/images/logo-white.png" alt="resiSUS" width={200} height={80} />
         </div>
 
-        <h2 className="text-xl font-bold text-gray-800 text-center mb-6">Cadastro de Residente</h2>
+        <h2 className="text-xl font-bold text-gray-800 text-center mb-6">Ficha de Solicitação</h2>
 
         <form className="grid grid-cols-1 md:grid-cols-2 gap-4" onSubmit={handleRegister}>
           
@@ -145,12 +145,12 @@ export default function Register() {
             disabled={loading}
             className="md:col-span-2 w-full bg-teal-600 hover:bg-green-600 text-white py-3 rounded-xl font-semibold transition disabled:opacity-50"
           >
-            {loading ? "Processando..." : "Finalizar Cadastro"}
+            {loading ? "Processando..." : "Finalizar Solicitação"}
           </button>
         </form>
 
         <p className="text-center mt-6 text-gray-600 text-sm">
-          Já tem conta? <button onClick={() => router.push('/auth/login')} className="text-teal-600 font-bold hover:underline">Entrar</button>
+          Já possui cadastro? <button onClick={() => router.push('/auth/login')} className="text-teal-600 font-bold hover:underline">Retornar ao Login</button>
         </p>
       </div>
     </div>

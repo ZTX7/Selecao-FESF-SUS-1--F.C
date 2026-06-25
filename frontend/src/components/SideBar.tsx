@@ -88,7 +88,10 @@ export default function SideBar() {
           {/* Dica: Adicione onClick={() => setIsOpen(false)} nos botões da nav para fechar ao clicar */}
           
           <div className="p-6 border-b border-teal-800 flex items-center justify-center">
-             <Image src="/images/resisus-bgteal.png" alt="resiSUS" width={150} height={70} priority className="mx-auto" />
+             <Image src="/images/resisus-bgteal.png" 
+             alt="resiSUS" 
+             width={150} 
+             height={70} priority className="mx-auto" />
           </div>
 
           {/* 3. Dados do Residente Logado (Identificação Atualizada) */}

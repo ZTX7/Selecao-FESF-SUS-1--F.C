@@ -189,7 +189,7 @@ export default function Login(){
                         onClick={() => router.push('/auth/register')}
                         className="ml-2 text-teal-600 font-medium hover:text-green-600"
                     >
-                    Registrar-se
+                    Solicitar acesso.
                     </button>
                 </div>
 

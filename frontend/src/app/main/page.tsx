@@ -18,48 +18,10 @@ import {
   Legend
 } from "recharts";
 
+import { Activity } from "@/types/activity";
+import { LoggedUser } from "@/types/user";
+import { RecentReport, ReportSummary } from "@/types/dashboard";
 
-interface LoggedUser {
-  id: number;
-  nome_completo: string;
-  area_atuacao: string;
-}
-
-interface Activity {
-  id: number;
-  usf: string;
-  responsavel_acompanhamento: string;
-  detalhes_atividade: string;
-  carga_horaria: number;
-  status: "PENDENTE" | "APROVADO" | "REJEITADO";
-  data_criacao: string;
-}
-
-interface RecentReport {
-  id: number;
-  usf: string;
-  detalhes_atividade: string;
-  data_submissao: string;
-  status: "PENDENTE" | "APROVADO" | "REJEITADO";
-}
-
-
-interface ChartDataPeriod {
-  periodo: string;
-  quantidade: number;
-}
-
-interface ReportSummary {
-  totalReports: number;
-  approved: number;
-  rejected: number;
-  pending: number;
-  totalHoursInputted: number;
-  totalHoursApproved: number;
-  totalHoursPending: number;
-  recentReports: RecentReport[];
-  chartDataPeriod: ChartDataPeriod[]; 
-}
 
 
 const PIE_COLORS = {

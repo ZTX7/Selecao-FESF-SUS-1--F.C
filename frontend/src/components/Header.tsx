@@ -2,7 +2,6 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 
-// 📐 Interface de propriedades para dinamizar os títulos por página
 interface HeaderProps {
   title: string;
   subtitle: string;
